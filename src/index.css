@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Body Style */
+body {
+  @apply bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600 shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800;
+}
+
+/* Card */
+.card {
+  @apply bg-white rounded-xl shadow-md p-3 transition-all duration-200;
+}
+
+.card:hover {
+  @apply shadow-lg scale-[1.01];
+}
+
+/* Dragging Effect */
+.dragging {
+  @apply opacity-70 shadow-2xl scale-105;
+}
+
+.dragging {
+  opacity: 0.6;
+  transform: rotate(2deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Kanban Column */
+.kanban-column {
+  @apply bg-gray-100 rounded-xl p-3 flex flex-col;
+}
+
+.kanban-header {
+  @apply font-semibold text-sm mb-2 flex justify-between items-center;
+}
+
+.kanban-body {
+  @apply overflow-y-auto space-y-2 pr-1;
+  max-height: 70vh;
+}
+
+/* List Table */
+.table {
+  @apply w-full border-collapse bg-white rounded-xl overflow-hidden shadow-md;
+}
+
+.table th {
+  @apply bg-gray-200 text-left text-sm p-3 cursor-pointer;
+}
+
+.table td {
+  @apply p-3 border-b text-sm;
+}
+
+.table tr:hover {
+  @apply bg-gray-50;
+}
+
+/* Timeline */
+.timeline-bar {
+  @apply h-4 rounded-md;
+}
+
+/* Priority Colors */
+.priority-low {
+  @apply bg-green-400 text-white px-2 py-0.5 rounded text-xs;
+}
+
+.priority-medium {
+  @apply bg-yellow-400 text-white px-2 py-0.5 rounded text-xs;
+}
+
+.priority-high {
+  @apply bg-orange-500 text-white px-2 py-0.5 rounded text-xs;
+}
+
+.priority-critical {
+  @apply bg-red-500 text-white px-2 py-0.5 rounded text-xs;
+}
+
+/* Due Date */
+.due-today {
+  @apply text-blue-600 font-semibold;
+}
+
+.overdue {
+  @apply text-red-500 font-semibold;
+}
+
+/* Avatar */
+.avatar {
+  @apply w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold;
+}
+
+/* Collaboration Avatar Stack */
+.avatar-stack {
+  @apply flex -space-x-2;
+}
+
+.avatar-stack span {
+  @apply border-2 border-white;
+}
+
+/* Filters Bar */
+.filter-bar {
+  @apply bg-white p-3 rounded-xl shadow flex flex-wrap gap-2 items-center;
+}
+
+/* Empty State */
+.empty-state {
+  @apply flex flex-col items-center justify-center text-gray-400 text-sm h-full;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .kanban-column {
+    min-width: 250px;
+  }
+}
+
+/* Mobile-like (even if not required, still safe) */
+@media (max-width: 768px) {
+  .container {
+    @apply px-2;
+  }
+
+  .btn {
+    @apply px-3 py-1 text-sm;
+  }
+
+  .kanban-column {
+    min-width: 220px;
+  }
+}
+
+/* ✨ Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🧼 Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
