@@ -1,3 +1,7 @@
+# Project Tracker Website
+
+![Weside Screenshot](https://github.com/anmol2438x-lab/Project-Tracker/blob/main/public/Screenshot%202026-03-23%20103545.png)
+
 # Project Tracker UI
 
 A fully functional multi-view project management tool built using React + TypeScript.
@@ -5,7 +9,7 @@ This application demonstrates advanced frontend engineering concepts including c
 
 ---
 
-##  Setup Instructions
+## Setup Instructions
 
 1. Clone the repository:
    git clone https://github.com/anmol2438x-lab
@@ -24,12 +28,13 @@ This application demonstrates advanced frontend engineering concepts including c
 
 ---
 
-##  State Management (Why Zustand?)
+## State Management (Why Zustand?)
 
 Zustand is used for global state management due to its simplicity and performance.
 It avoids boilerplate code compared to Redux and allows direct state updates.
 
 All task data is stored in a global store and shared across:
+
 - Kanban View
 - List View
 - Timeline View
@@ -38,9 +43,10 @@ This ensures instant view switching without re-fetching or duplicating state.
 
 ---
 
-##  Features Implemented
+## Features Implemented
 
 ### 1. Kanban Board View
+
 - Four columns: To Do, In Progress, In Review, Done
 - Tasks displayed as cards
 - Column-wise task count
@@ -55,6 +61,7 @@ This ensures instant view switching without re-fetching or duplicating state.
 ---
 
 ### 2. List View
+
 - Flat table of all tasks
 - Sortable columns:
   - Title (A–Z)
@@ -66,6 +73,7 @@ This ensures instant view switching without re-fetching or duplicating state.
 ---
 
 ### 3. Timeline / Gantt View
+
 - Tasks plotted on horizontal timeline
 - Bars represent duration (start → due date)
 - Color-coded by priority
@@ -75,15 +83,17 @@ This ensures instant view switching without re-fetching or duplicating state.
 
 ---
 
-##  Custom Drag-and-Drop Implementation
+## Custom Drag-and-Drop Implementation
 
 Drag-and-drop is implemented using native browser APIs:
+
 - `draggable`
 - `onDragStart`
 - `onDragOver`
 - `onDrop`
 
 Key Features:
+
 - Dragged card follows cursor with opacity and shadow
 - Placeholder maintains layout stability
 - Drop zones highlight when dragging over
@@ -92,26 +102,29 @@ Key Features:
 
 ---
 
-##  Virtual Scrolling Implementation
+## Virtual Scrolling Implementation
 
 Virtual scrolling is built manually to handle large datasets (500+ tasks).
 
 Approach:
+
 - Fixed row height
 - Calculate visible range using `scrollTop`
 - Render only visible rows + buffer (5 above & below)
 - Use absolute positioning inside a container with full height
 
 Benefits:
+
 - Smooth scrolling
 - No DOM overload
 - No flickering or blank gaps
 
 ---
 
-##  Live Collaboration Simulation
+## Live Collaboration Simulation
 
 Simulated real-time users using interval-based updates:
+
 - 2–4 mock users move randomly across tasks
 - Each user shown as colored avatar
 - Multiple users stack on same task
@@ -119,7 +132,7 @@ Simulated real-time users using interval-based updates:
 
 ---
 
-##  Filters & URL State
+## Filters & URL State
 
 - Filter by:
   - Status (multi-select)
@@ -133,7 +146,7 @@ Simulated real-time users using interval-based updates:
 
 ---
 
-##  Lighthouse Performance
+## Lighthouse Performance
 
 The application achieves a Lighthouse performance score above 85.
 
@@ -142,11 +155,11 @@ The application achieves a Lighthouse performance score above 85.
 - Best Practices: 100
 - SEO: 100
 
- Screenshot included in project folder.
+Screenshot included in project folder.
 
 ---
 
-##  Constraints Followed
+## Constraints Followed
 
 - No drag-and-drop libraries used
 - No virtual scrolling libraries used
@@ -156,7 +169,7 @@ The application achieves a Lighthouse performance score above 85.
 
 ---
 
-##  Explanation (UI Challenge)
+## Explanation (UI Challenge)
 
 The most challenging part of this project was implementing a custom drag-and-drop system without causing layout shifts. When a card is dragged, removing it from the DOM can cause surrounding elements to collapse. To prevent this, a placeholder element with the same height is rendered in place of the dragged card. This ensures layout stability and smooth interaction.
 
@@ -172,7 +185,7 @@ If given more time, I would improve the virtual scrolling logic to support dynam
 
 ---
 
-##  Tech Stack
+## Tech Stack
 
 - React + TypeScript
 - Zustand (State Management)
@@ -181,6 +194,6 @@ If given more time, I would improve the virtual scrolling logic to support dynam
 
 ---
 
-##  Author
+## Author
 
 Anmol Kumar
