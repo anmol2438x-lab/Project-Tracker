@@ -44,7 +44,6 @@ export default function KanbanColumn({ title, tasks, onDrop }: Props) {
         onDrop(id);
       }}
     >
-
       <h2 className="kanban-header">
         {title.toUpperCase()} ({tasks.length})
       </h2>
@@ -57,7 +56,6 @@ export default function KanbanColumn({ title, tasks, onDrop }: Props) {
 
           return (
             <div key={task.id}>
-
               {dragId === task.id && (
                 <div className="h-[70px] bg-gray-200 rounded mb-2 border-2 border-dashed transition-all" />
               )}
@@ -75,9 +73,7 @@ export default function KanbanColumn({ title, tasks, onDrop }: Props) {
                 }}
                 className="card cursor-grab transition-all"
               >
-
                 <p className="font-medium">{task.title}</p>
-
 
                 <div className="flex justify-between mt-2 items-center">
                   <span className="avatar bg-blue-500">{task.assignee}</span>
@@ -86,7 +82,6 @@ export default function KanbanColumn({ title, tasks, onDrop }: Props) {
                     {task.priority}
                   </span>
                 </div>
-
 
                 <p
                   className={`text-xs mt-1 ${
@@ -98,7 +93,6 @@ export default function KanbanColumn({ title, tasks, onDrop }: Props) {
                   {getDueText(task.dueDate)}
                 </p>
 
-             
                 {taskUsers.length > 0 && (
                   <div className="flex mt-2 -space-x-2">
                     {taskUsers.slice(0, 2).map((u) => (
